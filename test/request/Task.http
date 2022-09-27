@@ -1,0 +1,26 @@
+### GET /
+GET http://localhost:5000/api/tasks
+
+### GET /:id
+GET http://localhost:5000/api/tasks/6332b630972b58b73d1134ae
+
+### POST /
+POST http://localhost:5000/api/tasks 
+Content-Type: application/json
+
+{
+    "title": "my task",
+    "description": "my task description"
+}
+
+### PUT /:id
+PUT http://localhost:5000/api/tasks/6332b630972b58b73d1134ae
+Content-Type: application/json
+
+{
+    "title": "my task 2",
+    "description": "my task description 2"
+}
+
+### DELETE /:id
+DELETE http://localhost:5000/api/tasks/6332b630972b58b73d1134ae
