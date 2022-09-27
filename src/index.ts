@@ -1,14 +1,12 @@
-import express from "express";
+import config from "./utils/config";
+import app from "./app";
+import connectToDatabase from "./services/database";
 
-const app = express();
+const main = async () => {
+  await connectToDatabase();
+  app.listen(config.PORT, () =>
+    console.log("Server running on port", config.PORT)
+  );
+};
 
-const PORT = 5000;
-
-app.get("/", (_, res) => {
-  console.log("Hello World!");
-  res.send("Hello World!");
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+main();
