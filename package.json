@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "set NODE_ENV=development && ts-node-dev --respawn src/index.ts",
+    "dev": "ts-node-dev --respawn src/index.ts",
     "start": "node build/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "build": "set NODE_ENV=production && npm run lint && tsc"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
